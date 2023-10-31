@@ -1,0 +1,626 @@
+/* BODY */
+
+body {
+  background-image: linear-gradient(
+      rgb(0, 0, 0),
+      rgba(255, 255, 255, 0),
+      rgb(0, 0, 0)
+    ),
+    url(https://static.vecteezy.com/system/resources/previews/001/834/542/non_2x/abstract-dots-animal-print-design-leopard-print-design-cheetah-skin-background-free-vector.jpg);
+  padding: 0rem 2rem 2rem;
+}
+
+/* 1. Header */
+
+header {
+  display: unset;
+}
+
+/* 1.1. Upper-Header */
+
+.upper-header {
+  background-color: #fcdc2c;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & p {
+    color: #080804;
+    font-size: 1.6rem;
+  }
+}
+
+/* 1.2. The-Header-Container */
+
+.the-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.4rem solid #13170c;
+  position: sticky;
+  top: 0rem;
+  z-index: 2;
+  max-width: 1366px;
+  width: 100%;
+  background-color: #5e723b;
+  border-radius: 0rem 0rem 1rem 1rem;
+}
+
+/* 1.2.1. Nav-Left */
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  letter-spacing: 0.35rem;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 5rem;
+  padding: 0.5rem;
+}
+
+.logo-title {
+  font-weight: 700;
+  padding-left: 0.3rem;
+  color: #f3a51c;
+  -webkit-text-stroke: 0.1rem #000;
+}
+
+.logo-notif {
+  font-size: 1.2rem;
+  letter-spacing: 0rem;
+  background-color: #b60000;
+  border-radius: 100%;
+  width: 2.1rem;
+  height: 2.1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0.5rem;
+  left: 14.9rem;
+}
+
+/* 1.2.2. Nav-Right */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* 1.2.2.1 Search-Bar */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.search-form-input {
+  width: 20rem;
+  padding: 1rem 1rem 0.7rem 1rem;
+  border: 0rem solid #ccc;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+  font-size: 1.6rem;
+}
+
+.search-form-button {
+  background-color: #384423;
+  color: #fff;
+  border: none;
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+  padding: 1rem 2rem;
+  margin-left: 0px;
+  cursor: pointer;
+  & i {
+    font-size: 2rem;
+  }
+}
+
+.search-form-button:hover {
+  background-color: #425029;
+}
+
+/* 1.2.2.2. Right-Nav-List */
+
+.main-nav-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.main-nav-link a {
+  display: flex;
+  align-items: center;
+  margin: 0 1.3rem;
+  font-size: 1.6rem;
+  font-weight: 520;
+  text-decoration: none;
+}
+
+.main-nav-link:not(:last-child) a:link,
+a:visited {
+  color: #fff;
+}
+
+.main-nav-link:not(:last-child) a:hover,
+a:active {
+  color: #db9519;
+  transition-duration: 0.13s;
+}
+
+.main-nav-link:last-child a:link,
+a:visited {
+  background-color: #f3a51c;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  margin: 0 1rem;
+  margin-right: 2rem;
+}
+
+.main-nav-link:last-child a:hover,
+a:active {
+  background-color: #db9519;
+  transition-duration: 0.13s;
+}
+
+/* 1.2.2.3. Hamburger-Menu */
+
+.menu-toggle {
+  display: none;
+  font-size: 2.8rem;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.nav-hidden {
+  display: none;
+}
+
+/* 2. Main */
+
+.main {
+  background-color: #f5f1ea;
+  box-shadow: 0rem 0rem 1rem #384423;
+  border-radius: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+/* 2.1. Hero */
+
+.section-hero {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background-color: #333;
+  background-position: center;
+  height: 65rem;
+  padding-top: 4.8rem;
+  justify-content: space-between;
+  background-image: linear-gradient(
+      to top right,
+      rgba(255, 255, 255, 0),
+      rgb(0, 0, 0)
+    ),
+    url(https://images.unsplash.com/photo-1619494296448-ab5f847ece97?auto=format&fit=crop&q=80&w=1450&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.heading-primary--1 {
+  margin-left: auto;
+  font-size: 16rem;
+  display: flex;
+  justify-content: end;
+  margin: 2rem;
+  font-family: "Roboto Serif", serif;
+  font-weight: 400;
+}
+
+.heading-primary--2 {
+  margin-right: 2rem;
+  margin-left: auto;
+  font-size: 6rem;
+  display: flex;
+  justify-content: end;
+  margin: 2rem;
+}
+
+.hero-desc {
+  font-size: 2.6rem;
+  line-height: 1.5;
+  margin: 1.5rem;
+  font-family: "Roboto Serif", serif;
+  letter-spacing: 0.05rem;
+}
+
+/* 2.2. Loves */
+
+h2,
+.heading-secondary {
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  padding: 3rem 0rem 3rem;
+  color: #384423;
+}
+
+.main-love {
+  padding-bottom: 4rem;
+  height: fit-content;
+}
+
+.love-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 20rem;
+  column-gap: 1.2rem;
+}
+
+.love-image {
+  position: relative;
+}
+
+.fa-heart {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 5rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.love-image:hover .fa-heart {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.love-image:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.444),
+    rgba(0, 0, 0, 0.02)
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.gallery {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* box-shadow: 0rem 0rem 1rem #384423; */
+}
+
+.gallery:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  bottom: 0;
+  transition: height 0.5s ease-out;
+  background: linear-gradient(to bottom, transparent 0%, black 100%);
+}
+
+.square:hover:before {
+  height: 100%;
+}
+
+/* 2.3. Facts */
+
+.main-facts {
+  height: fit-content;
+  padding-bottom: 4rem;
+}
+
+.facts-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.facts-content-ul {
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #333;
+  font-family: "Roboto Serif", serif;
+}
+.facts-content-photo {
+  height: 40rem;
+  box-shadow: 0rem 0rem 0.5rem #384423;
+  margin: 0rem 2rem;
+}
+
+/* 2.4. Video */
+
+.main-video {
+  display: flex;
+  height: fit-content;
+  padding-bottom: 4rem;
+}
+
+.section-video {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-cheetah-running {
+  margin: 0rem auto;
+}
+
+/* 2.5. Love-Button */
+
+.section-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  padding-bottom: 4rem;
+}
+
+.form-like {
+  font-size: 2.7rem;
+  margin: auto;
+  background-color: #384423;
+  color: #fff;
+  border: 0.4rem solid #13170c;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.form-like:hover {
+  background-color: #db9519;
+  transition-duration: 0.13s;
+}
+
+/* 3. Footer */
+
+.footer-form {
+  color: #fff;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-heading.heading-secondary {
+  color: #fff;
+}
+
+.sign-in-form {
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.form-input {
+  width: 20rem;
+  padding: 1rem 1rem 0.7rem 1rem;
+  border: 0rem solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  margin: 1rem;
+}
+
+.form-submit-container {
+  display: flex;
+  justify-content: end;
+}
+
+.form-submit {
+  background-color: #5e723b;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  margin-left: 0px;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  font-size: 1.6rem;
+}
+
+.form-submit:hover {
+  background-color: #384423;
+}
+
+.feedback-form {
+  padding: 2rem;
+}
+
+.radio-input-label {
+  display: flex;
+  margin: 1rem 0rem 2rem;
+}
+
+.form-radio-label {
+  margin-right: 1.8rem;
+}
+
+.form-radio-label.last-child {
+  margin-right: 0rem;
+}
+
+.form-text-area {
+  width: 40rem;
+  padding: 1rem 1rem 0.7rem 1rem;
+  border: 0rem solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  margin: 1rem;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* 1. Desktop */
+
+@media screen and (max-width: 1280px) {
+  .love-images {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 30rem);
+    column-gap: 2rem;
+    row-gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main-nav-list {
+    display: none;
+  }
+
+  /* exp */
+  .menu-toggle {
+    display: block;
+  }
+  .nav-hidden {
+    border-bottom: 0.6rem solid #13170c;
+    background: #5e723b;
+    border-radius: 1rem;
+    position: absolute;
+    top: 6rem;
+    right: 0;
+  }
+  .nav-hidden.active {
+    display: block;
+  }
+  .nav-hidden ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-hidden li {
+    padding: 3rem 2rem;
+    border-bottom: 0.4rem solid #13170c;
+  }
+  .nav-hidden-li.cheetah-btn {
+    border-bottom: 0;
+  }
+  .nav-hidden li:last-child a:link,
+  a:visited {
+    background-color: #f3a51c;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    margin: 0;
+  }
+  .nav-hidden a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+  }
+  /* exp */
+
+  .love-images {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 22rem);
+    column-gap: 1.2rem;
+    row-gap: 1.8rem;
+  }
+  .facts-content-ul {
+    margin-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-container {
+    display: none;
+  }
+  .love-images {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 40rem);
+    column-gap: 2rem;
+  }
+  .facts-content-photo {
+    height: 35rem;
+  }
+}
+
+/* 0 */
+
+@media screen and (min-width: 1366px) {
+  body {
+    max-width: 1366px;
+    margin: auto;
+  }
+}
+
+/* 2. Anggep aja Tablet */
+
+/* 3. Mobile */
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  body {
+    padding: 0rem 1rem 2rem;
+  }
+  .section-hero {
+    background-position: 40% 50%;
+    background-size: 75rem;
+    height: 50rem;
+    padding-top: 2rem;
+  }
+  .heading-primary--1 {
+    font-size: 6.6rem;
+    margin: 1rem;
+  }
+  .heading-primary--2 {
+    margin-right: 0rem;
+    font-size: 3.7rem;
+    margin: 0rem 1.3rem;
+  }
+  .hero-desc {
+    font-size: 1.75rem;
+    margin: 1rem;
+  }
+  .heading-secondary {
+    font-size: 2.5rem;
+    padding: 2rem 0rem 1.5rem;
+  }
+  .love-images {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 22rem);
+  }
+  .main-facts {
+    padding-bottom: 3rem;
+  }
+  .facts-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .facts-content-photo {
+    margin-bottom: 1.5rem;
+  }
+  .main-video {
+    padding-bottom: 3rem;
+  }
+  .video-cheetah-running {
+    width: 30rem;
+    height: auto;
+  }
+  .form-like {
+    font-size: 2rem;
+    padding: 0.8rem 1.6rem;
+  }
+  .form-heading.heading-secondary {
+    font-size: 2.15rem;
+  }
+  .radio-input-label {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .form-text-area {
+    width: 25rem;
+  }
+}

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link rel="icon" href="./img/logos/AADC_logo.png" type="image/png" />
+
+    <title>AADC: Cheetah. Photo App</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="upper-header">
+        <p>Powered by RevoU</p>
+      </div>
+      <div class="the-header">
+        <a class="logo" href="#">
+          <img
+            class="logo-img"
+            src="./img/logos/AADC_logo.png"
+            alt="Cheetah cute logo"
+          />
+          <strong class="logo-title">AADC</strong>
+          <span class="logo-notif" id="logo-notif">0</span>
+        </a>
+        <nav class="main-nav">
+          <div class="search-container">
+            <form
+              class="search-form"
+              action="https://en.wikipedia.org/wiki/Cheetah"
+              method="get"
+            >
+              <input
+                class="search-form-input"
+                type="text"
+                placeholder="Search..."
+              />
+              <button class="search-form-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+          <ul class="main-nav-list">
+            <li class="main-nav-link">
+              <a href="#">Ada</a>
+            </li>
+            <li class="main-nav-link"><a href="#">Apa</a></li>
+            <li class="main-nav-link"><a href="#">Dengan</a></li>
+            <li class="main-nav-link cheetah-btn">
+              <a href="#section-form">Cheetah?</a>
+            </li>
+          </ul>
+          <div class="menu-toggle">
+            <i
+              class="fa-solid fa-bars hamburger-menu"
+              style="color: #ffffff"
+            ></i>
+          </div>
+          <!-- exp -->
+          <nav class="nav-hidden">
+            <ul class="nav-hidden-ul">
+              <li class="nav-hidden-li">
+                <a href="#">Ada</a>
+              </li>
+              <li class="nav-hidden-li"><a href="#">Apa</a></liass=>
+              <li class="nav-hidden-li"><a href="#">Dengan</a></li>
+              <li class="nav-hidden-li cheetah-btn">
+                <a href="#section-form">Cheetah?</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- exp -->
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="main main-hero section-hero">
+        <div>
+          <h1 class="heading-primary--1">Cheetah.</h1>
+          <h1 class="heading-primary--2">Photo App</h1>
+        </div>
+        <p class="hero-desc">
+          This is a web about <br />
+          the fastest mammal on earth!
+        </p>
+      </section>
+
+      <section class="main main-love section-love">
+        <h2 class="heading-secondary">Cheetah Photos</h2>
+        <div class="love-images">
+          <div id="love-test" class="love-image">
+            <img
+              class="gallery photo-1"
+              src="./img/gallery/photos-1.jpg"
+              alt=""
+            />
+            <div class="overlay"></div>
+            <i class="fa-regular fa-heart"></i>
+            <i
+              id="love-button"
+              class="fa-solid fa-heart"
+              style="color: #b60000"
+            ></i>
+          </div>
+          <div class="love-image">
+            <img
+              class="gallery photo-2"
+              src="./img/gallery/photos-2.jpg"
+              alt=""
+            />
+            <div class="overlay"></div>
+          </div>
+          <div class="love-image">
+            <img
+              class="gallery photo-3"
+              src="./img/gallery/photos-3.jpg"
+              alt=""
+            />
+            <div class="overlay"></div>
+          </div>
+          <div class="love-image">
+            <img
+              class="gallery photo-4"
+              src="./img/gallery/photos-4.jpg"
+              alt=""
+            />
+            <div class="overlay"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main main-facts section-facts">
+        <h2 class="heading-secondary">Facts about Cheetahs</h2>
+        <div class="facts-content">
+          <ul class="facts-content-ul">
+            <li>
+              Cheetahs are the <strong>fastest</strong> land animal on Earth.
+            </li>
+            <li>Cheetahs have around <strong>2000 spots</strong>.</li>
+            <li>
+              Cheetahs use their spotted coat as a <strong>disguise</strong>.
+            </li>
+            <li>
+              Cheetahs can give birth to <strong>2-8 cubs</strong> at a time.
+            </li>
+            <li>Cheetahs <strong>don’t roar</strong>.</li>
+            <li>Cheetahs have <strong>excellent eyesight</strong>.</li>
+            <li>
+              Cheetahs only <strong>hunt</strong> during the
+              <strong>day</strong>.
+            </li>
+            <li>Cheetahs live up to <strong>10 years</strong> in the wild.</li>
+            <li>Can survive up to <strong>10 days</strong> without water.</li>
+            <li>
+              The population of cheetahs is only around <strong>7000.</strong>
+            </li>
+          </ul>
+          <img
+            class="facts-content-photo"
+            src="./img/gallery/photos-5.jpg"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <section class="main main-video section-video">
+        <h2 class="heading-secondary">A-Cheetah-Running Video</h2>
+        <iframe
+          class="video-cheetah-running"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/zgQ0cyNJZV4?si=SoofZtsaoScHcdHJ"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <section id="section-form" class="main section-form">
+        <h2 class="heading-secondary">Join AADC!</h2>
+        <button class="form-like" id="increment-button">We ❤️ Cheetah!</button>
+      </section>
+    </main>
+
+    <footer id="footer-form" class="footer-form">
+      <h2 class="form-heading heading-secondary">
+        Contribute to this Community!
+      </h2>
+      <form action="" method="get" class="form--1" id="form-sign-in">
+        <fieldset class="sign-in-form">
+          <legend>Sign In</legend>
+          <div class="username">
+            <label for="username">username:</label>
+            <br />
+            <input
+              type="text"
+              class="form-input"
+              id="username"
+              name="username"
+              required
+              size="10"
+            />
+          </div>
+          <div>
+            <label for="password">password:</label>
+            <br />
+            <input
+              type="password"
+              class="form-input"
+              id="password"
+              name="password"
+              required
+            />
+          </div>
+          <div class="form-submit-container">
+            <input class="form-submit" type="submit" value="Sign In" />
+          </div>
+        </fieldset>
+      </form>
+      <form action="" method="get" id="form-feedback">
+        <fieldset class="feedback-form">
+          <legend>Tell Us What You Wanna Tell</legend>
+          <div>
+            <p>What is your favorite animal?</p>
+            <div class="radio-input-label">
+              <div class="radio-input-label--1">
+                <input
+                  type="radio"
+                  class="form-radio"
+                  id="cheetah-1"
+                  name="cheetah"
+                  value="cheetah"
+                />
+                <label class="form-radio-label" for="cheetah-1">Cheetah</label>
+              </div>
+              <div class="radio-input-label--2">
+                <input
+                  type="radio"
+                  class="form-radio"
+                  id="cheetah-2"
+                  name="cheetah"
+                  value="cheetah"
+                />
+                <label class="form-radio-label cheetah-2" for="cheetah-2"
+                  >Cheetah. 🤬</label
+                >
+              </div>
+              <div class="radio-input-label--3">
+                <input
+                  type="radio"
+                  class="form-radio"
+                  id="cheetah-3"
+                  name="cheetah"
+                  value="cheetah"
+                />
+                <label class="form-radio-label last-child" for="cheetah-3"
+                  >Of course, Cheetah! 😆</label
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <p>Why do you love Cheetah so much?</p>
+            <textarea class="form-text-area" rows="3"></textarea>
+          </div>
+          <div>
+            <p>Any feedback for Us?</p>
+            <textarea class="form-text-area" rows="3"></textarea>
+          </div>
+          <div class="form-submit-container">
+            <input class="form-submit" type="submit" value="Submit" />
+          </div>
+        </fieldset>
+      </form>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
