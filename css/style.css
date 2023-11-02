@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "Roboto Serif";
+  src: url(/fonts/Roboto_Serif/RobotoSerif-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Roboto Serif";
+  src: url(/fonts/Roboto_Serif/RobotoSerif-Bold.ttf);
+  font-weight: bold;
+}
+
 /* BODY */
 
 body {
@@ -8,6 +19,7 @@ body {
     ),
     url(https://static.vecteezy.com/system/resources/previews/001/834/542/non_2x/abstract-dots-animal-print-design-leopard-print-design-cheetah-skin-background-free-vector.jpg);
   padding: 0rem 2rem 2rem;
+  font-family: sans-serif;
 }
 
 /* 1. Header */
@@ -206,6 +218,17 @@ a:active {
       rgb(0, 0, 0)
     ),
     url(https://images.unsplash.com/photo-1619494296448-ab5f847ece97?auto=format&fit=crop&q=80&w=1450&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  /* animation-name: slide-up; */
+  animation-duration: 2s;
+}
+
+@keyframes slide-up {
+  50% {
+    margin-top: 100%;
+  }
+  100% {
+    margin-top: 0%;
+  }
 }
 
 .heading-primary--1 {
@@ -214,8 +237,10 @@ a:active {
   display: flex;
   justify-content: end;
   margin: 2rem;
-  font-family: "Roboto Serif", serif;
+  font-family: "Roboto Serif", serif, sans-serif;
   font-weight: 400;
+  animation-duration: 4s;
+  /* animation-name: slide-in-to-right; */
 }
 
 .heading-primary--2 {
@@ -225,14 +250,49 @@ a:active {
   display: flex;
   justify-content: end;
   margin: 2rem;
+  animation-duration: 4.5s;
+  /* animation-name: slide-in-to-right; */
+  animation-delay: 0.5s;
+}
+
+@keyframes slide-in-to-right {
+  0% {
+    margin-right: 100%;
+    display: none;
+  }
+  50% {
+    margin-right: 100%;
+    display: none;
+  }
+  100% {
+    margin-right: 2rem;
+  }
 }
 
 .hero-desc {
   font-size: 2.6rem;
   line-height: 1.5;
   margin: 1.5rem;
-  font-family: "Roboto Serif", serif;
+  font-family: "Roboto Serif", serif, sans-serif;
   letter-spacing: 0.05rem;
+  /* animation-name: slide-in-to-left; */
+  animation-duration: 4.5s;
+  text-shadow: 0.1rem 0.1rem 0.1rem #000;
+  animation-delay: 0.5s;
+}
+
+@keyframes slide-in-to-left {
+  0% {
+    margin-left: 100%;
+    display: none;
+  }
+  50% {
+    margin-left: 100%;
+    display: none;
+  }
+  100% {
+    margin-left: 1.5rem;
+  }
 }
 
 /* 2.2. Loves */
@@ -253,9 +313,9 @@ h2,
 
 .love-images {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 20rem;
-  column-gap: 1.2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 65vh);
+  gap: 1.4rem;
 }
 
 .love-image {
@@ -293,6 +353,14 @@ h2,
   );
   opacity: 0;
   transition: opacity 0.3s;
+}
+
+.love-image--1 {
+  grid-row: 1 / span 2;
+}
+
+.love-image--2 {
+  grid-column: 2 / span 2;
 }
 
 .gallery {
@@ -334,7 +402,7 @@ h2,
   font-size: 1.6rem;
   line-height: 1.75;
   color: #333;
-  font-family: "Roboto Serif", serif;
+  font-family: "Roboto Serif", serif, sans-serif;
 }
 .facts-content-photo {
   height: 40rem;
@@ -461,6 +529,27 @@ h2,
   margin: 1rem;
 }
 
+input[type="range"] {
+  appearance: none;
+  width: 30rem;
+  padding: 0.5rem;
+  height: 0.1rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  background-color: #5e723b;
+}
+
+input[type="date"] {
+  appearance: none;
+  color: #fff;
+  width: 15rem;
+  padding: 1rem;
+  height: 0.1rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  background-color: #5e723b;
+}
+
 /* RESPONSIVE BREAKPOINTS */
 
 /* 1. Desktop */
@@ -469,8 +558,7 @@ h2,
   .love-images {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 30rem);
-    column-gap: 2rem;
-    row-gap: 3rem;
+    gap: 2rem;
   }
 }
 
@@ -524,17 +612,25 @@ h2,
   /* exp */
 
   .love-images {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 22rem);
-    column-gap: 1.2rem;
-    row-gap: 1.8rem;
+    grid-template-rows: repeat(2, 80vh);
+    gap: 1.4rem;
+  }
+  .love-image--1 {
+    grid-row: 1 / span 1;
+  }
+  .love-image--2 {
+    grid-column: 2 / span 1;
   }
   .facts-content-ul {
+    padding: 0rem 1rem;
     margin-left: 3rem;
+    list-style: square;
   }
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .search-container {
     display: none;
   }
@@ -546,24 +642,16 @@ h2,
   .facts-content-photo {
     height: 35rem;
   }
-}
+} */
 
-/* 0 */
+/* Mobile */
 
-@media screen and (min-width: 1366px) {
-  body {
-    max-width: 1366px;
-    margin: auto;
-  }
-}
-
-/* 2. Anggep aja Tablet */
-
-/* 3. Mobile */
-
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   body {
     padding: 0rem 1rem 2rem;
+  }
+  .search-container {
+    display: none;
   }
   .section-hero {
     background-position: 40% 50%;
@@ -589,17 +677,15 @@ h2,
     padding: 2rem 0rem 1.5rem;
   }
   .love-images {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 22rem);
-  }
-  .main-facts {
-    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
   }
   .facts-content {
     display: flex;
     flex-direction: column-reverse;
   }
   .facts-content-photo {
+    height: 35rem;
     margin-bottom: 1.5rem;
   }
   .main-video {
@@ -624,3 +710,13 @@ h2,
     width: 25rem;
   }
 }
+
+@media screen and (min-width: 1366px) {
+  body {
+    max-width: 1366px;
+    margin: auto;
+  }
+}
+/* 2. Anggep aja Tablet */
+
+/* 3. Mobile */

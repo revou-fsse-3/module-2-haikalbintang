@@ -105,7 +105,7 @@
       <section class="main main-love section-love">
         <h2 class="heading-secondary">Cheetah Photos</h2>
         <div class="love-images">
-          <div id="love-test" class="love-image">
+          <div id="love-test" class="love-image love-image--1">
             <img
               class="gallery photo-1"
               src="./img/gallery/photos-1.jpg"
@@ -119,7 +119,7 @@
               style="color: #b60000"
             ></i>
           </div>
-          <div class="love-image">
+          <div class="love-image--2">
             <img
               class="gallery photo-2"
               src="./img/gallery/photos-2.jpg"
@@ -127,7 +127,7 @@
             />
             <div class="overlay"></div>
           </div>
-          <div class="love-image">
+          <div class="love-image--3">
             <img
               class="gallery photo-3"
               src="./img/gallery/photos-3.jpg"
@@ -135,7 +135,7 @@
             />
             <div class="overlay"></div>
           </div>
-          <div class="love-image">
+          <div class="love-image--4">
             <img
               class="gallery photo-4"
               src="./img/gallery/photos-4.jpg"
@@ -285,6 +285,21 @@
             <p>Any feedback for Us?</p>
             <textarea class="form-text-area" rows="3"></textarea>
           </div>
+          <div>
+            <p>Rate our page:</p>
+            <div>
+              <input type="range" id="interface" name="interface" min="0" max="11" />
+              <label for="interface">Interface</label>
+            </div>
+            <div>
+              <input type="range" id="experience" name="experience" min="0" max="11" />
+              <label for="experience">Experience</label>
+            </div>
+          </div>
+          <div>
+            <label for="start">Submit date:</label>
+            <input type="date" id="start" name="trip-start" value="2023-11-05" min="2023-11-05" max="2037-12-31" />
+          </div>          
           <div class="form-submit-container">
             <input class="form-submit" type="submit" value="Submit" />
           </div>
