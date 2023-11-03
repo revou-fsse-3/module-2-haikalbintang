@@ -1,3 +1,5 @@
+/* FontFace */
+
 @font-face {
   font-family: "Roboto Serif";
   src: url(/fonts/Roboto_Serif/RobotoSerif-Regular.ttf);
@@ -9,11 +11,54 @@
   font-weight: bold;
 }
 
+/* Keyframes */
+
+@keyframes slide-up {
+  50% {
+    margin-top: 100%;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}
+
+@keyframes slide-in-to-right {
+  0% {
+    margin-right: 100%;
+    display: none;
+  }
+  50% {
+    margin-right: 100%;
+    display: none;
+  }
+  100% {
+    margin-right: 2rem;
+  }
+}
+
+@keyframes slide-in-to-left {
+  0% {
+    margin-left: 100%;
+    display: none;
+  }
+  50% {
+    margin-left: 100%;
+    display: none;
+  }
+  100% {
+    margin-left: 1.5rem;
+  }
+}
+
+/* UniversalSelector */
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+/* :root */
 
 :root {
   --revou-bg-color: #fcdc2c;
@@ -40,11 +85,32 @@
 }
 
 .dark-theme {
+  /* --old variable: new value */
+
   --revou-bg-color: #080804;
   --revou-text-color: #fcdc2c;
+
+  --white--1: #fff;
+  --white--2: #ccc;
+
+  --black--1: #000;
+  --black--2: #ccc;
+  --black--3: #555;
+
+  --red--1: #b60000;
+
+  --green--1: #384423;
+  --green--2: #425029;
+  --green--3: #5e723b;
+  --green--4: #13170c;
+
+  --orange--1: #db9519;
+  --orange--2: #f3a51c;
+
+  --main-bg-color: #13170c;
 }
 
-/* BODY */
+/* Body~ */
 
 body {
   background-image: linear-gradient(
@@ -55,15 +121,24 @@ body {
     url(https://static.vecteezy.com/system/resources/previews/001/834/542/non_2x/abstract-dots-animal-print-design-leopard-print-design-cheetah-skin-background-free-vector.jpg);
   padding: 0rem 2rem 2rem;
   font-family: sans-serif;
+
+  & h2,
+  .heading-secondary {
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    padding: 3rem 0rem 3rem;
+    color: var(--green--3);
+  }
 }
 
-/* 1. Header */
+/* Header */
 
 header {
   display: unset;
 }
 
-/* 1.1. Upper-Header */
+/* Header/UpperHeader */
 
 .upper-header {
   background-color: var(--revou-bg-color);
@@ -77,12 +152,12 @@ header {
   }
 }
 
-/* 1.2. The-Header-Container */
+/* Header/TheHeader */
 
 .the-header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 0.4rem solid;
+  border-bottom: 0.4rem solid var(--green--4);
   position: sticky;
   top: 0rem;
   z-index: 2;
@@ -92,7 +167,7 @@ header {
   border-radius: 0rem 0rem 1rem 1rem;
 }
 
-/* 1.2.1. Nav-Left */
+/* Header/TheHeader/Left */
 
 .logo {
   display: flex;
@@ -100,121 +175,124 @@ header {
   font-size: 3rem;
   letter-spacing: 0.35rem;
   text-decoration: none;
+
+  & .logo-img {
+    height: 5rem;
+    padding: 0.5rem;
+  }
+
+  & .logo-title {
+    font-weight: 700;
+    padding-left: 0.3rem;
+    color: var(--orange--1);
+    -webkit-text-stroke: 0.1rem var(--black--1);
+  }
+
+  & .logo-notif {
+    font-size: 1.2rem;
+    letter-spacing: 0rem;
+    background-color: var(--red--1);
+    border-radius: 100%;
+    width: 2.1rem;
+    height: 2.1rem;
+    color: var(--white--1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0.5rem;
+    left: 14.9rem;
+  }
 }
 
-.logo-img {
-  height: 5rem;
-  padding: 0.5rem;
-}
+/* Header/TheHeader/Right */
 
-.logo-title {
-  font-weight: 700;
-  padding-left: 0.3rem;
-  color: var(--orange--1);
-  -webkit-text-stroke: 0.1rem var(--black--1);
-}
-
-.logo-notif {
-  font-size: 1.2rem;
-  letter-spacing: 0rem;
-  background-color: var(--red--1);
-  border-radius: 100%;
-  width: 2.1rem;
-  height: 2.1rem;
-  color: var(--white--1);
+.header-right-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0.5rem;
-  left: 14.9rem;
 }
 
-/* 1.2.2. Nav-Right */
-
-.main-nav {
-  display: flex;
-  align-items: center;
-}
-
-/* 1.2.2.1 Search-Bar */
+/* Header/TheHeader/Right/Search */
 
 .search-container {
   display: flex;
   align-items: center;
   margin-right: 2rem;
-}
 
-.search-form-input {
-  width: 20rem;
-  padding: 1rem 1rem 0.7rem 1rem;
-  border: 0rem solid var(--white--2);
-  border-radius: 0.5rem 0rem 0rem 0.5rem;
-  font-size: 1.6rem;
-}
+  & .search-form {
+    & .search-form-input {
+      width: 20rem;
+      padding: 1rem 1rem 0.7rem 1rem;
+      border: 0rem solid var(--white--2);
+      border-radius: 0.5rem 0rem 0rem 0.5rem;
+      font-size: 1.6rem;
+    }
 
-.search-form-button {
-  background-color: var(--green--3);
-  color: var(--white--1);
-  border: none;
-  border-radius: 0rem 0.5rem 0.5rem 0rem;
-  padding: 1rem 2rem;
-  margin-left: 0px;
-  cursor: pointer;
-  & i {
-    font-size: 2rem;
+    & .search-form-button {
+      background-color: var(--green--3);
+      color: var(--white--1);
+      border: none;
+      border-radius: 0rem 0.5rem 0.5rem 0rem;
+      padding: 1rem 2rem;
+      margin-left: 0px;
+      cursor: pointer;
+
+      & i {
+        font-size: 2rem;
+      }
+    }
+
+    & .search-form-button:hover {
+      background-color: var(--green--2);
+    }
   }
 }
 
-.search-form-button:hover {
-  background-color: var(--green--3);
-}
+/* Header/TheHeader/Right/NavUL */
 
-/* 1.2.2.2. Right-Nav-List */
-
-.main-nav-list {
+.nav-ul {
   display: flex;
   list-style: none;
   align-items: center;
+
+  & .nav-li a {
+    display: flex;
+    align-items: center;
+    margin: 0 1.3rem;
+    font-size: 1.6rem;
+    font-weight: 520;
+    text-decoration: none;
+  }
+
+  & .nav-li:not(:last-child) a:link,
+  a:visited {
+    color: var(--white--1);
+  }
+
+  & .nav-li:not(:last-child) a:hover,
+  a:active {
+    color: var(--orange--2);
+    transition-duration: 0.13s;
+  }
+
+  & .nav-li:last-child a:link,
+  a:visited {
+    background-color: var(--orange--1);
+    color: var(--white--1);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    margin: 0 1rem;
+    margin-right: 2rem;
+  }
+
+  & .nav-li:last-child a:hover,
+  a:active {
+    background-color: var(--orange--2);
+    transition-duration: 0.13s;
+  }
 }
 
-.main-nav-link a {
-  display: flex;
-  align-items: center;
-  margin: 0 1.3rem;
-  font-size: 1.6rem;
-  font-weight: 520;
-  text-decoration: none;
-}
-
-.main-nav-link:not(:last-child) a:link,
-a:visited {
-  color: var(--white--1);
-}
-
-.main-nav-link:not(:last-child) a:hover,
-a:active {
-  color: var(--orange--2);
-  transition-duration: 0.13s;
-}
-
-.main-nav-link:last-child a:link,
-a:visited {
-  background-color: var(--orange--1);
-  color: var(--white--1);
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  margin: 0 1rem;
-  margin-right: 2rem;
-}
-
-.main-nav-link:last-child a:hover,
-a:active {
-  background-color: var(--orange--2);
-  transition-duration: 0.13s;
-}
-
-/* 1.2.2.3. Hamburger-Menu */
+/* Header/TheHeader/Right/HamburgerMenu */
 
 .menu-toggle {
   display: none;
@@ -223,11 +301,13 @@ a:active {
   cursor: pointer;
 }
 
+/* Header/TheHeader/Right/DropdownMenu */
+
 .nav-hidden {
   display: none;
 }
 
-/* 2. Main */
+/* Main */
 
 .main {
   background-color: var(--main-bg-color);
@@ -236,7 +316,7 @@ a:active {
   margin-bottom: 2.5rem;
 }
 
-/* 2.1. Hero */
+/* Main/Hero */
 
 .section-hero {
   display: flex;
@@ -254,107 +334,61 @@ a:active {
     url(https://images.unsplash.com/photo-1619494296448-ab5f847ece97?auto=format&fit=crop&q=80&w=1450&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   animation-name: slide-up;
   animation-duration: 2s;
-}
 
-@keyframes slide-up {
-  50% {
-    margin-top: 100%;
+  & .heading-primary--1 {
+    margin-left: auto;
+    font-size: 16rem;
+    display: flex;
+    justify-content: end;
+    margin: 2rem;
+    font-family: "Roboto Serif", serif, sans-serif;
+    font-weight: 400;
+    animation-duration: 4s;
+    animation-name: slide-in-to-right;
   }
-  100% {
-    margin-top: 0%;
-  }
-}
 
-.heading-primary--1 {
-  margin-left: auto;
-  font-size: 16rem;
-  display: flex;
-  justify-content: end;
-  margin: 2rem;
-  font-family: "Roboto Serif", serif, sans-serif;
-  font-weight: 400;
-  animation-duration: 4s;
-  animation-name: slide-in-to-right;
-}
-
-.heading-primary--2 {
-  margin-right: 2rem;
-  margin-left: auto;
-  font-size: 6rem;
-  display: flex;
-  justify-content: end;
-  margin: 2rem;
-  animation-duration: 4.5s;
-  animation-name: slide-in-to-right;
-  animation-delay: 0.5s;
-  flex-direction: row;
-}
-
-@keyframes slide-in-to-right {
-  0% {
-    margin-right: 100%;
-    display: none;
-  }
-  50% {
-    margin-right: 100%;
-    display: none;
-  }
-  100% {
+  & .heading-primary--2 {
     margin-right: 2rem;
+    margin-left: auto;
+    font-size: 6rem;
+    display: flex;
+    justify-content: end;
+    margin: 2rem;
+    animation-duration: 4.5s;
+    animation-name: slide-in-to-right;
+    animation-delay: 0.5s;
+    flex-direction: row;
+  }
+
+  & .hero-desc {
+    font-size: 2.6rem;
+    line-height: 1.5;
+    margin: 1.5rem;
+    font-family: "Roboto Serif", serif, sans-serif;
+    letter-spacing: 0.05rem;
+    animation-name: slide-in-to-left;
+    animation-duration: 4.5s;
+    text-shadow: 0.1rem 0.1rem 0.1rem var(--black--1);
+    animation-delay: 0.5s;
   }
 }
 
-.hero-desc {
-  font-size: 2.6rem;
-  line-height: 1.5;
-  margin: 1.5rem;
-  font-family: "Roboto Serif", serif, sans-serif;
-  letter-spacing: 0.05rem;
-  animation-name: slide-in-to-left;
-  animation-duration: 4.5s;
-  text-shadow: 0.1rem 0.1rem 0.1rem var(--black--1);
-  animation-delay: 0.5s;
-}
+/* Main/Photos */
 
-@keyframes slide-in-to-left {
-  0% {
-    margin-left: 100%;
-    display: none;
-  }
-  50% {
-    margin-left: 100%;
-    display: none;
-  }
-  100% {
-    margin-left: 1.5rem;
-  }
-}
-
-/* 2.2. Loves */
-
-h2,
-.heading-secondary {
-  display: flex;
-  justify-content: center;
-  font-size: 4rem;
-  padding: 3rem 0rem 3rem;
-  color: var(--green--3);
-}
-
-.main-love {
+.main-photos {
   padding-bottom: 4rem;
   height: fit-content;
-}
 
-.love-images {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 65vh);
-  gap: 1.4rem;
-}
+  & .photos-love {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 65vh);
+    gap: 1.4rem;
 
-.love-image {
-  position: relative;
+    & .love-image {
+      position: relative;
+    }
+  }
 }
 
 .fa-heart {
