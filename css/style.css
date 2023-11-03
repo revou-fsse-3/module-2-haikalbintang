@@ -121,15 +121,15 @@ body {
     url(https://static.vecteezy.com/system/resources/previews/001/834/542/non_2x/abstract-dots-animal-print-design-leopard-print-design-cheetah-skin-background-free-vector.jpg);
   padding: 0rem 2rem 2rem;
   font-family: sans-serif;
+}
 
-  & h2,
-  .heading-secondary {
-    display: flex;
-    justify-content: center;
-    font-size: 4rem;
-    padding: 3rem 0rem 3rem;
-    color: var(--green--3);
-  }
+h2,
+.heading-secondary {
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  padding: 3rem 0rem 3rem;
+  color: var(--green--3);
 }
 
 /* Header */
@@ -316,7 +316,8 @@ header {
   margin-bottom: 2.5rem;
 }
 
-/* Main/Hero */
+/* Main/Section */
+/* Main/Section/Hero */
 
 .section-hero {
   display: flex;
@@ -373,7 +374,7 @@ header {
   }
 }
 
-/* Main/Photos */
+/* Main/Section/Photos */
 
 .main-photos {
   padding-bottom: 4rem;
@@ -385,127 +386,123 @@ header {
     grid-template-rows: repeat(2, 65vh);
     gap: 1.4rem;
 
+    & .love-image--1 {
+      grid-row: 1 / span 2;
+    }
+
+    & .love-image--2 {
+      grid-column: 2 / span 2;
+    }
+
     & .love-image {
       position: relative;
+
+      & .gallery {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      & .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.444),
+          rgba(0, 0, 0, 0.02)
+        );
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      & .fa-heart {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        font-size: 5rem;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      & .love-image:hover .overlay {
+        opacity: 1;
+      }
+
+      & .love-image:hover .fa-heart {
+        opacity: 1;
+        cursor: pointer;
+      }
     }
   }
 }
 
-.fa-heart {
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  font-size: 5rem;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.love-image:hover .fa-heart {
-  opacity: 1;
-  cursor: pointer;
-}
-
-.love-image:hover .overlay {
-  opacity: 1;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.444),
-    rgba(0, 0, 0, 0.02)
-  );
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.love-image--1 {
-  grid-row: 1 / span 2;
-}
-
-.love-image--2 {
-  grid-column: 2 / span 2;
-}
-
-.gallery {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* 2.3. Facts */
+/* Main/Section/Facts */
 
 .main-facts {
   height: fit-content;
   padding-bottom: 4rem;
+
+  & .facts-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    & .facts-content-ul {
+      font-size: 1.6rem;
+      line-height: 1.75;
+      color: var(--black--2);
+      font-family: "Roboto Serif", serif, sans-serif;
+    }
+    & .facts-content-photo {
+      height: 40rem;
+      box-shadow: 0rem 0rem 0.5rem var(--green--3);
+      margin: 0rem 2rem;
+    }
+  }
 }
 
-.facts-content {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.facts-content-ul {
-  font-size: 1.6rem;
-  line-height: 1.75;
-  color: var(--black--2);
-  font-family: "Roboto Serif", serif, sans-serif;
-}
-.facts-content-photo {
-  height: 40rem;
-  box-shadow: 0rem 0rem 0.5rem var(--green--3);
-  margin: 0rem 2rem;
-}
-
-/* 2.4. Video */
-
-.main-video {
-  display: flex;
-  height: fit-content;
-  padding-bottom: 4rem;
-}
+/* Main/Section/Video */
 
 .section-video {
   display: flex;
   flex-direction: column;
+  height: fit-content;
+  padding-bottom: 4rem;
+
+  & .video-cheetah-running {
+    margin: 0rem auto;
+  }
 }
 
-.video-cheetah-running {
-  margin: 0rem auto;
-}
+/* Main/Section/Love */
 
-/* 2.5. Love-Button */
-
-.section-form {
+.section-love {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
   padding-bottom: 4rem;
+
+  & .form-love {
+    font-size: 2.7rem;
+    margin: auto;
+    background-color: var(--green--3);
+    color: var(--white--1);
+    border: 0.4rem solid var(--green--4);
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+  }
+
+  & .form-love:hover {
+    background-color: var(--orange--2);
+    transition-duration: 0.13s;
+  }
 }
 
-.form-like {
-  font-size: 2.7rem;
-  margin: auto;
-  background-color: var(--green--3);
-  color: var(--white--1);
-  border: 0.4rem solid var(--green--4);
-  border-radius: 0.5rem;
-  padding: 1rem 2rem;
-  cursor: pointer;
-}
-
-.form-like:hover {
-  background-color: var(--orange--2);
-  transition-duration: 0.13s;
-}
-
-/* 3. Footer */
+/* Footer */
 
 .footer-form {
   color: var(--white--1);
@@ -520,23 +517,46 @@ header {
   color: var(--white--1);
 }
 
-.sign-in-form {
-  padding: 2rem;
-  margin-bottom: 3rem;
+.form--1 {
+  & .sign-in-form {
+    padding: 2rem;
+    margin-bottom: 3rem;
+    & .username {
+      & .form-input {
+        width: 20rem;
+        padding: 1rem 1rem 0.7rem 1rem;
+        border: 0rem solid var(--white--2);
+        border-radius: 0.5rem;
+        font-size: 1.6rem;
+        margin: 1rem;
+      }
+    }
+    & .password {
+      & .form-input {
+        width: 20rem;
+        padding: 1rem 1rem 0.7rem 1rem;
+        border: 0rem solid var(--white--2);
+        border-radius: 0.5rem;
+        font-size: 1.6rem;
+        margin: 1rem;
+      }
+    }
+    & .form-submit-container {
+      display: flex;
+      justify-content: end;
+    }
+  }
 }
 
-.form-input {
-  width: 20rem;
-  padding: 1rem 1rem 0.7rem 1rem;
-  border: 0rem solid var(--white--2);
-  border-radius: 0.5rem;
-  font-size: 1.6rem;
-  margin: 1rem;
-}
+.form--2 {
+  & .feedback-form {
+    padding: 2rem;
 
-.form-submit-container {
-  display: flex;
-  justify-content: end;
+    & .radio-input-label {
+      display: flex;
+      margin: 1rem 0rem 2rem;
+    }
+  }
 }
 
 .form-submit {
@@ -554,15 +574,6 @@ header {
 
 .form-submit:hover {
   background-color: var(--green--3);
-}
-
-.feedback-form {
-  padding: 2rem;
-}
-
-.radio-input-label {
-  display: flex;
-  margin: 1rem 0rem 2rem;
 }
 
 .form-radio-label {
@@ -594,7 +605,7 @@ input[type="range"] {
 
 input[type="date"] {
   appearance: none;
-  color: var(--black--3);
+  color: #fff;
   width: 15rem;
   padding: 1rem;
   height: 0.1rem;
@@ -608,7 +619,7 @@ input[type="date"] {
 /* 1. Desktop */
 
 @media screen and (max-width: 1280px) {
-  .love-images {
+  .photos-love {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 30rem);
     gap: 2rem;
