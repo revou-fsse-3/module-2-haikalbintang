@@ -253,6 +253,7 @@ a:active {
   animation-duration: 4.5s;
   animation-name: slide-in-to-right;
   animation-delay: 0.5s;
+  flex-direction: row;
 }
 
 @keyframes slide-in-to-right {
@@ -541,7 +542,7 @@ input[type="range"] {
 
 input[type="date"] {
   appearance: none;
-  color: #fff;
+  color: #555;
   width: 15rem;
   padding: 1rem;
   height: 0.1rem;
