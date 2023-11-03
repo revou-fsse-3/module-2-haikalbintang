@@ -9,6 +9,41 @@
   font-weight: bold;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --revou-bg-color: #fcdc2c;
+  --revou-text-color: #080804;
+
+  --white--1: #fff;
+  --white--2: #ccc;
+
+  --black--1: #000;
+  --black--2: #333;
+  --black--3: #555;
+
+  --red--1: #b60000;
+
+  --green--1: #5e723b;
+  --green--2: #425029;
+  --green--3: #384423;
+  --green--4: #13170c;
+
+  --orange--1: #f3a51c;
+  --orange--2: #db9519;
+
+  --main-bg-color: #f5f1ea;
+}
+
+.dark-theme {
+  --revou-bg-color: #080804;
+  --revou-text-color: #fcdc2c;
+}
+
 /* BODY */
 
 body {
@@ -47,13 +82,13 @@ header {
 .the-header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 0.4rem solid #13170c;
+  border-bottom: 0.4rem solid;
   position: sticky;
   top: 0rem;
   z-index: 2;
   max-width: 1366px;
   width: 100%;
-  background-color: #5e723b;
+  background-color: var(--green--1);
   border-radius: 0rem 0rem 1rem 1rem;
 }
 
@@ -75,18 +110,18 @@ header {
 .logo-title {
   font-weight: 700;
   padding-left: 0.3rem;
-  color: #f3a51c;
-  -webkit-text-stroke: 0.1rem #000;
+  color: var(--orange--1);
+  -webkit-text-stroke: 0.1rem var(--black--1);
 }
 
 .logo-notif {
   font-size: 1.2rem;
   letter-spacing: 0rem;
-  background-color: #b60000;
+  background-color: var(--red--1);
   border-radius: 100%;
   width: 2.1rem;
   height: 2.1rem;
-  color: white;
+  color: var(--white--1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,14 +148,14 @@ header {
 .search-form-input {
   width: 20rem;
   padding: 1rem 1rem 0.7rem 1rem;
-  border: 0rem solid #ccc;
+  border: 0rem solid var(--white--2);
   border-radius: 0.5rem 0rem 0rem 0.5rem;
   font-size: 1.6rem;
 }
 
 .search-form-button {
-  background-color: #384423;
-  color: #fff;
+  background-color: var(--green--3);
+  color: var(--white--1);
   border: none;
   border-radius: 0rem 0.5rem 0.5rem 0rem;
   padding: 1rem 2rem;
@@ -132,7 +167,7 @@ header {
 }
 
 .search-form-button:hover {
-  background-color: #425029;
+  background-color: var(--green--3);
 }
 
 /* 1.2.2.2. Right-Nav-List */
@@ -154,19 +189,19 @@ header {
 
 .main-nav-link:not(:last-child) a:link,
 a:visited {
-  color: #fff;
+  color: var(--white--1);
 }
 
 .main-nav-link:not(:last-child) a:hover,
 a:active {
-  color: #db9519;
+  color: var(--orange--2);
   transition-duration: 0.13s;
 }
 
 .main-nav-link:last-child a:link,
 a:visited {
-  background-color: #f3a51c;
-  color: #fff;
+  background-color: var(--orange--1);
+  color: var(--white--1);
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   margin: 0 1rem;
@@ -175,7 +210,7 @@ a:visited {
 
 .main-nav-link:last-child a:hover,
 a:active {
-  background-color: #db9519;
+  background-color: var(--orange--2);
   transition-duration: 0.13s;
 }
 
@@ -195,8 +230,8 @@ a:active {
 /* 2. Main */
 
 .main {
-  background-color: #f5f1ea;
-  box-shadow: 0rem 0rem 1rem #384423;
+  background-color: var(--main-bg-color);
+  box-shadow: 0rem 0rem 1rem var(--green--3);
   border-radius: 1rem;
   margin-bottom: 2.5rem;
 }
@@ -206,7 +241,7 @@ a:active {
 .section-hero {
   display: flex;
   flex-direction: column;
-  color: #fff;
+  color: var(--white--1);
   background-position: center;
   height: 65rem;
   padding-top: 4.8rem;
@@ -277,7 +312,7 @@ a:active {
   letter-spacing: 0.05rem;
   animation-name: slide-in-to-left;
   animation-duration: 4.5s;
-  text-shadow: 0.1rem 0.1rem 0.1rem #000;
+  text-shadow: 0.1rem 0.1rem 0.1rem var(--black--1);
   animation-delay: 0.5s;
 }
 
@@ -303,7 +338,7 @@ h2,
   justify-content: center;
   font-size: 4rem;
   padding: 3rem 0rem 3rem;
-  color: #384423;
+  color: var(--green--3);
 }
 
 .main-love {
@@ -385,12 +420,12 @@ h2,
 .facts-content-ul {
   font-size: 1.6rem;
   line-height: 1.75;
-  color: #333;
+  color: var(--black--2);
   font-family: "Roboto Serif", serif, sans-serif;
 }
 .facts-content-photo {
   height: 40rem;
-  box-shadow: 0rem 0rem 0.5rem #384423;
+  box-shadow: 0rem 0rem 0.5rem var(--green--3);
   margin: 0rem 2rem;
 }
 
@@ -423,23 +458,23 @@ h2,
 .form-like {
   font-size: 2.7rem;
   margin: auto;
-  background-color: #384423;
-  color: #fff;
-  border: 0.4rem solid #13170c;
+  background-color: var(--green--3);
+  color: var(--white--1);
+  border: 0.4rem solid var(--green--4);
   border-radius: 0.5rem;
   padding: 1rem 2rem;
   cursor: pointer;
 }
 
 .form-like:hover {
-  background-color: #db9519;
+  background-color: var(--orange--2);
   transition-duration: 0.13s;
 }
 
 /* 3. Footer */
 
 .footer-form {
-  color: #fff;
+  color: var(--white--1);
   font-size: 1.6rem;
   display: flex;
   flex-direction: column;
@@ -448,7 +483,7 @@ h2,
 }
 
 .form-heading.heading-secondary {
-  color: #fff;
+  color: var(--white--1);
 }
 
 .sign-in-form {
@@ -459,7 +494,7 @@ h2,
 .form-input {
   width: 20rem;
   padding: 1rem 1rem 0.7rem 1rem;
-  border: 0rem solid #ccc;
+  border: 0rem solid var(--white--2);
   border-radius: 0.5rem;
   font-size: 1.6rem;
   margin: 1rem;
@@ -471,8 +506,8 @@ h2,
 }
 
 .form-submit {
-  background-color: #5e723b;
-  color: #fff;
+  background-color: var(--green--1);
+  color: var(--white--1);
   border: none;
   border-radius: 0.5rem;
   padding: 1rem 2rem;
@@ -484,7 +519,7 @@ h2,
 }
 
 .form-submit:hover {
-  background-color: #384423;
+  background-color: var(--green--3);
 }
 
 .feedback-form {
@@ -507,7 +542,7 @@ h2,
 .form-text-area {
   width: 40rem;
   padding: 1rem 1rem 0.7rem 1rem;
-  border: 0rem solid #ccc;
+  border: 0rem solid var(--white--2);
   border-radius: 0.5rem;
   font-size: 1.6rem;
   margin: 1rem;
@@ -520,18 +555,18 @@ input[type="range"] {
   height: 0.1rem;
   border-radius: 1rem;
   margin: 1rem;
-  background-color: #5e723b;
+  background-color: var(--green--1);
 }
 
 input[type="date"] {
   appearance: none;
-  color: #555;
+  color: var(--black--3);
   width: 15rem;
   padding: 1rem;
   height: 0.1rem;
   border-radius: 1rem;
   margin: 1rem;
-  background-color: #5e723b;
+  background-color: var(--green--1);
 }
 
 /* RESPONSIVE BREAKPOINTS */
@@ -556,8 +591,8 @@ input[type="date"] {
     display: block;
   }
   .nav-hidden {
-    border-bottom: 0.6rem solid #13170c;
-    background: #5e723b;
+    border-bottom: 0.6rem solid var(--green--4);
+    background: var(--green--1);
     border-radius: 1rem;
     position: absolute;
     top: 6rem;
@@ -575,21 +610,21 @@ input[type="date"] {
   }
   .nav-hidden li {
     padding: 3rem 2rem;
-    border-bottom: 0.4rem solid #13170c;
+    border-bottom: 0.4rem solid var(--green--4);
   }
   .nav-hidden-li.cheetah-btn {
     border-bottom: 0;
   }
   .nav-hidden li:last-child a:link,
   a:visited {
-    background-color: #f3a51c;
-    color: #fff;
+    background-color: var(--orange--1);
+    color: var(--white--1);
     padding: 1rem 2rem;
     border-radius: 0.5rem;
     margin: 0;
   }
   .nav-hidden a {
-    color: white;
+    color: var(--white--1);
     text-decoration: none;
     font-size: 1.6rem;
   }
