@@ -78,7 +78,7 @@
               <li class="nav-hidden-li">
                 <a href="#">Ada</a>
               </li>
-              <li class="nav-hidden-li"><a href="#">Apa</a></liass=>
+              <li class="nav-hidden-li"><a href="#">Apa</a></li>
               <li class="nav-hidden-li"><a href="#">Dengan</a></li>
               <li class="nav-hidden-li cheetah-btn">
                 <a href="#section-form">Cheetah?</a>
@@ -288,24 +288,50 @@
           <div>
             <p>Rate our page:</p>
             <div>
-              <input type="range" id="interface" name="interface" min="0" max="11" />
+              <input
+                type="range"
+                id="interface"
+                name="interface"
+                min="0"
+                max="11"
+              />
               <label for="interface">Interface</label>
             </div>
             <div>
-              <input type="range" id="experience" name="experience" min="0" max="11" />
+              <input
+                type="range"
+                id="experience"
+                name="experience"
+                min="0"
+                max="11"
+              />
               <label for="experience">Experience</label>
             </div>
           </div>
           <div>
             <label for="start">Submit date:</label>
-            <input type="date" id="start" name="trip-start" value="2023-11-05" min="2023-11-05" max="2037-12-31" />
-          </div>          
+            <input
+              type="date"
+              id="start"
+              name="trip-start"
+              value="2023-11-05"
+              min="2023-11-05"
+              max="2037-12-31"
+            />
+          </div>
           <div class="form-submit-container">
             <input class="form-submit" type="submit" value="Submit" />
           </div>
         </fieldset>
       </form>
     </footer>
+    <script>
+      const logo = document.querySelector(".logo-img");
+
+      logo.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+      };
+    </script>
     <!-- <script src="./js/script.js"></script> -->
   </body>
 </html>

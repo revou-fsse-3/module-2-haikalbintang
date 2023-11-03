@@ -66,6 +66,74 @@ Medium: 11px
   box-sizing: border-box;
 }
 
+.light-mode {
+  --revou-bg-color: #fcdc2c;
+  --revou-text-color: #080804;
+
+  --green--1
+}
+
+:root {
+  /* --revou-bg-color: #fcdc2c; */
+  /* --revou-text-color: #080804; */
+
+  --header-ijo-color: #5e723b;
+  --header-border-color: #13170c;
+  --header-title-color: #f3a51c;
+
+  --header-notif-bg-color: #b60000;
+  --white-header-notif-text-color: #fff;
+
+  --ijo-btn-color: #384423;
+  --ijo-btn-hover-color: #425029;
+  --white-icon-color: #fff;
+
+  --white-nav-text-color: #fff;
+  --nav-text_hover-color: #db9519;
+
+  --cheetah-btn-bg-color: #f3a51c;
+  --cheetah-btn-text-color: #fff;
+  --cheetah-btn-bg-hover-color: #db9519;
+
+  --main-bg-color: #f5f1ea;
+  --main-shadow-color: #384423;
+
+  --hero-text-color: #fff;
+  --hero-desc-shadow-color: #000;
+
+  --heading-secondary-color: #384423;
+
+  --facts-content-color: #333;
+  --facts-photo-shadow-color: #384423;
+
+  --like-btn-bg-color: #384423;
+  --like-btn-text-color: #fff;
+  --like-btn-bg-hover-color: #db9519;
+  --like-btn-border-color: #13170c;
+
+  --form-color: #fff;
+  --form-input-color: #ccc;
+  --form-btn-color: #5e723b;
+  --form-btn-text-color: #fff;
+  --form-btn-hover-color: #384423;
+  --form-text-area-color: #ccc;
+  --form-range-bg-color: #5e723b;
+  --form-date-bg-color: #5e723b;
+  --form-date-color: #555;
+
+  /* media query */
+
+  --nav-hidden-border-color: #13170c;
+  --nav-hidden-bg-color: #5e723b;
+  --nav-hidden-border_bottom-color: #13170c;
+  --nav-hidden-bg-color: #f3a51c;
+  --nav-hidden-a-color: #fff;
+}
+.dark-theme {
+  --revou-bg-color: #080804;
+  --revou-text-color: #fcdc2c;
+}
+
 html {
   font-size: 62.5%;
 }
