@@ -560,13 +560,21 @@ header {
     .photos-container {
       display: flex;
       flex-direction: column;
+      padding: 0rem 10rem;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .photos-container {
+      padding: 0rem;
     }
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .section-photos {
     padding-bottom: 3rem;
   }
+}
+@media screen and (max-width: 480px) {
 }
 
 /* Section/Facts */
@@ -596,6 +604,9 @@ header {
       .facts-content-ul {
         display: flex;
         flex-direction: column-reverse;
+        margin-right: 0.7rem;
+        margin-left: 3rem;
+        font-size: 1.6rem;
       }
     }
     @media screen and (max-width: 480px) {
@@ -610,21 +621,24 @@ header {
     }
     @media screen and (max-width: 768px) {
       .facts-photo {
-        height: 35rem;
+        height: 30rem;
         margin-bottom: 1.5rem;
+        margin: 0rem 3rem 1.5rem;
       }
     }
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     .facts-container {
       flex-direction: column-reverse;
     }
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .section-facts {
     padding-bottom: 3rem;
   }
+}
+@media screen and (max-width: 480px) {
 }
 
 /* Section/Video */
@@ -639,8 +653,7 @@ header {
   }
   @media screen and (max-width: 768px) {
     .video-cheetah-running {
-      width: 30rem;
-      height: auto;
+      width: 40rem;
     }
   }
   @media screen and (max-width: 480px) {
@@ -683,7 +696,7 @@ header {
     transition-duration: 0.13s;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .section-love {
     padding-bottom: 3rem;
   }
@@ -785,26 +798,32 @@ header {
         .range-interface,
         .range-experience {
           appearance: none;
-          width: 30rem;
-          padding: 0.5rem;
           height: 0.1rem;
           border-radius: 1rem;
           margin: 1rem;
           background-color: var(--green--1);
+          width: 30rem;
+          padding: 0.5rem;
         }
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 768px) {
           .range-interface,
           .range-experience {
-            width: 15rem;
-            padding: 0.3rem;
+            width: 20rem;
+            padding: 0.4rem;
+          }
+          @media screen and (max-width: 480px) {
+            .range-interface,
+            .range-experience {
+              width: 15rem;
+              padding: 0.3rem;
+            }
           }
         }
       }
     }
-
     .form--2--5 {
       .date {
-        appearance: none;
+        /* appearance: none; */
         color: #fff;
         width: 15rem;
         padding: 1rem;
@@ -812,6 +831,19 @@ header {
         border-radius: 1rem;
         margin: 1rem;
         background-color: var(--green--1);
+        font-size: 1.5rem;
+      }
+      @media screen and (max-width: 768px) {
+        .date {
+          width: 13.4rem;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .date {
+          font-size: 1.1rem;
+          padding: 0.6rem;
+          width: 10.2rem;
+        }
       }
     }
   }
@@ -832,7 +864,6 @@ header {
     border: none;
     border-radius: 0.5rem;
     padding: 1rem 2rem;
-    margin-left: 0px;
     cursor: pointer;
     margin-top: 1rem;
     margin-right: 1rem;
@@ -840,7 +871,10 @@ header {
   }
   @media screen and (max-width: 480px) {
     .submit-btn.second-form {
+      padding: 0.8rem 1.6rem;
       font-size: 1.2rem;
+      margin-top: 0.8rem;
+      margin-right: 0rem;
     }
   }
 
@@ -850,8 +884,8 @@ header {
 }
 
 /* 
-640
-768
+640-
+768-
 1024
 1280
 1536 */
