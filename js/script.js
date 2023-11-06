@@ -1,10 +1,12 @@
 "use strict";
 
+// -----------------Say 'Hello'----------------//
 // alert("Hello 👋 Welcome to AADC: Cheetah. Photo App");
 // alert("Collect 10 loves and you can join Our Community! ❤️😊");
 
-const likeButton = document.getElementById("increment-button");
+// ------Add Love To The Notification and Toggle Form------//
 const loveButton = document.getElementById("love-button");
+const likeButton = document.getElementById("increment-button");
 const logoNotif = document.getElementById("logo-notif");
 
 const footerForm = document.getElementById("form-feedback");
@@ -16,13 +18,12 @@ let notif = 0;
 function totalNotif() {
   notif++;
   logoNotif.textContent = notif;
-  if (notif > 9) {
+  if (notif > 0) {
     alert(
-      "Welcome to the Club, Cheetah lovers !! 😊😊 and lets fill in the Form! 🔥🔥"
+      "Welcome to the Club, Cheetah lovers !! 😊😊 Lets fill in the Form in the bottom of the page! 🔥🔥"
     );
     footerForm.style.display = "block";
   }
-  console.log(notif);
 }
 
 // function lovedImage() {}
@@ -33,6 +34,7 @@ likeButton.onclick = totalNotif;
 // Love Button //
 loveButton.onclick = totalNotif;
 
+// --------------------Dropdown Menu-----------------------//
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
   const navHidden = document.querySelector(".nav-hidden");
@@ -41,3 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
     navHidden.classList.toggle("active");
   });
 });
+
+// -------------------Light and Dark Modes-----------------//
+const logo = document.querySelector(".logo-img");
+
+logo.onclick = function () {
+  document.body.classList.toggle("dark-theme");
+};

@@ -115,7 +115,7 @@
             <i class="fa-regular fa-heart"></i>
             <i
               id="love-button"
-              class="fa-solid fa-heart"
+              class="love-button fa-solid fa-heart"
               style="color: #b60000"
             ></i>
           </div>
@@ -127,7 +127,7 @@
             />
             <div class="overlay"></div>
             <i class="fa-regular fa-heart"></i>
-            <i class="fa-solid fa-heart" style="color: #b60000"></i>
+            <i class="love-button fa-solid fa-heart" style="color: #b60000"></i>
           </div>
           <div class="photos photo--3">
             <img
@@ -137,7 +137,7 @@
             />
             <div class="overlay"></div>
             <i class="fa-regular fa-heart"></i>
-            <i class="fa-solid fa-heart" style="color: #b60000"></i>
+            <i class="love-button fa-solid fa-heart" style="color: #b60000"></i>
           </div>
           <div class="photos photo--4">
             <img
@@ -147,7 +147,7 @@
             />
             <div class="overlay"></div>
             <i class="fa-regular fa-heart"></i>
-            <i class="fa-solid fa-heart" style="color: #b60000"></i>
+            <i class="love-button fa-solid fa-heart" style="color: #b60000"></i>
           </div>
         </div>
       </section>
@@ -178,7 +178,21 @@
               The population of cheetahs is only around <strong>7000.</strong>
             </li>
           </ul>
-          <img class="facts-photo" src="./img/gallery/photos-5.jpg" alt="" />
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="./img/gallery/photos-5.1.jpg"
+            />
+            <source
+              media="(min-width: 769px)"
+              srcset="./img/gallery/photos-5.jpg"
+            />
+            <img
+              class="facts-photo"
+              src="./img/gallery/photos-5.jpg"
+              alt="A leopard disguises as a cheetah"
+            />
+          </picture>
         </div>
       </section>
 
@@ -337,13 +351,6 @@
         </fieldset>
       </form>
     </footer>
-    <script>
-      const logo = document.querySelector(".logo-img");
-
-      logo.onclick = function () {
-        document.body.classList.toggle("dark-theme");
-      };
-    </script>
-    <!-- <script src="./js/script.js"></script> -->
+    <script src="./js/script.js"></script>
   </body>
 </html>

@@ -348,19 +348,19 @@ header {
       .nav-hidden-li {
         padding: 3rem 2rem;
         border-bottom: 0.4rem solid var(--green--4);
-        .nav-hidden-li:last-child a:link,
-        a:visited {
-          background-color: var(--orange--1);
-          color: var(--white--1);
-          padding: 1rem 2rem;
-          border-radius: 0.5rem;
-          margin: 0;
-        }
-        .nav-hidden-li a {
+        & a {
           color: var(--white--1);
           text-decoration: none;
           font-size: 1.6rem;
         }
+      }
+      .nav-hidden-li:last-child a:link,
+      a:visited {
+        background-color: var(--orange--1);
+        color: var(--white--1);
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        margin: 0;
       }
       .nav-hidden-li.cheetah-btn {
         border-bottom: 0;
@@ -368,6 +368,7 @@ header {
     }
   }
 }
+
 /* End of Header */
 
 /* Main */
@@ -651,7 +652,7 @@ header {
     }
     @media screen and (max-width: 768px) {
       .facts-photo {
-        height: 30rem;
+        height: 50vw;
         margin-bottom: 1.5rem;
         margin: 0rem 3rem 1.5rem;
       }
