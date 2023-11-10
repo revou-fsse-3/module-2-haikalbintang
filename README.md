@@ -113,7 +113,7 @@ Step:
 Go to `adaapadengancheetah.com` and VOILA!
 ![](<img/documentations/Screenshot%20(656).png>)
 
-**[AADC: Cheetah. Photo App](adaapadengancheetah.site)**
+**[AADC: Cheetah. Photo App](https://adaapadengancheetah.site/)**
 
 Tell Us if You have any feedbacks, critics, or questions.
 
